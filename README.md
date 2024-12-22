@@ -97,6 +97,10 @@ The results are stored in a `model_df` DataFrame, summarizing:
 
 A combination of **PCA** and other techniques provided the best results. Further optimization was performed using PCA methods such as kernel-based and incremental PCA.
 
+Best Case - Light Gradient Boosting Machine Regressor, PCA (linear) -> 0.7768
+
+Worst Case - AdaBoost Regressor, PCA (kernel) -> -0.0099
+
 ---
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
