@@ -69,9 +69,31 @@ The top-performing model is determined for each configuration and recorded with 
 ## Results
 
 The results are stored in a `model_df` DataFrame, summarizing:
-- Model Type
-- Preprocessing Parameters
-- R² Score
+
+| Model Code                  | Model Parameters             | R²     |
+|-----------------------------|------------------------------|--------|
+| ExtraTreesRegressor         | None, 10 folds              | 0.7711 |
+| ExtraTreesRegressor         | None - shuffle, 10 folds    | 0.7674 |
+| LGBMRegressor               | None, 15 folds              | 0.7676 |
+| GradientBoostingRegressor   | None, 15 folds              | 0.7543 |
+| ExtraTreesRegressor         | Normalization, 10 folds     | 0.7677 |
+| ExtraTreesRegressor         | Normalization, 15 folds     | 0.7732 |
+| ExtraTreesRegressor         | Feature Selection, 10 folds | 0.6909 |
+| ExtraTreesRegressor         | Feature Selection, 15 folds | 0.6936 |
+| LGBMRegressor               | Outlier Removal, 10 folds   | 0.7671 |
+| LGBMRegressor               | Outlier Removal, 15 folds   | 0.7621 |
+| ExtraTreesRegressor         | Transformation, 10 folds    | 0.7704 |
+| LGBMRegressor               | Transformation, 15 folds    | 0.7684 |
+| LGBMRegressor               | PCA, 10 folds               | 0.7768 |
+| LGBMRegressor               | PCA, 15 folds               | 0.7708 |
+| ExtraTreesRegressor         | N+OR, 10 folds              | 0.7606 |
+| LGBMRegressor               | N+T, 10 folds               | 0.7680 |
+| BayesianRidge               | N+PCA, 10 folds             | 0.7140 |
+| ExtraTreesRegressor         | OR+PCA, 10 folds            | 0.7616 |
+| LGBMRegressor               | OR+T, 10 folds              | 0.7619 |
+| LGBMRegressor               | PCA+T, 10 folds             | 0.7696 |
+| AdaBoostRegressor           | PCA - kernel, 10 folds      | -0.0099|
+| ExtraTreesRegressor         | PCA - incremental, 10 folds | 0.7680 |
 
 A combination of **PCA** and other techniques provided the best results. Further optimization was performed using PCA methods such as kernel-based and incremental PCA.
 
