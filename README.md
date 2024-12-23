@@ -32,7 +32,7 @@ Models are evaluated under various conditions, including 10-fold and 15-fold cro
 
 1. Clone the repository:
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Guryansh/Fuel-Cell-Performance-Assignment
     ```
 2. Install required dependencies:
     ```bash
